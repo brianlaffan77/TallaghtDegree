@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatbot in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+  </head>
+  
+  <style>
+		/* Style the body */
+		.body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		/* Header Title */
+		.header {
+		  padding: 30px;
+		  text-align: center;
+		  background: #1abc9c;
+		  color: white;
+		  font-size: 30px;
+		}
+		
+		
+
+		/* Page Content */
+		.content {padding:20px;}
+	</style>
+  
+  <body>
+	<div class="header">
+	  <center><div class="navbar">
+		  <li><a href="index.html" style="color: #eb34c0; font-family: Times New Roman">Home</a>
+				<a href="login.html" style="color: #eb34c0; font-family: Times New Roman">Log in</a>
+				<a href="register.html" style="color: #eb34c0; font-family: Times New Roman">Register</a>
+                <a href="doctor.html" style="color: #eb34c0; font-family: Times New Roman">Doctor</a> 
+                <a href="hospital.html" style="color: #eb34c0; font-family: Times New Roman">Hospital</a>
+				<a href="issues.html" style="color: #eb34c0; font-family: Times New Roman">Issues</a>
+                <a href="https://www.google.com/maps/@53.2844896,-6.1842759,14z?entry=ttu" style="color: #eb34c0; font-family: Times New Roman">Map</a></li> 
+		  </div>
+	</div>
+	
+	<h1 style="color: #0da3de; font-family: Times New Roman"><center>Welcome To The Registration Page</center></h1>
+	
+		<center><form onsubmit="validate(event)">
+
+				<div>
+				  <h4><label for="userId" style="color: #a83268; font-family: Times New Roman">User Id</label><br></h4>
+				  <input type="text" class="input" name="userId" id="userId" placeholder="User ID"><br>
+				  <span id="userIdErr"></span>
+				</div>
+				<div>
+				  <h4><label for="password" style="color: #a83268; font-family: Times New Roman">Password</label><br></h4>
+				  <input type="password" class="input" name="password" id="password" placeholder="Password"><br>
+				  <span id="passwordErr"></span>
+				</div>
+				<div>
+				  <h4><label for="name" style="color: #a83268; font-family: Times New Roman">Name</label><br></h4>
+				  <input type="text" class="input" name="name" id="name" placeholder="Name" placeholder="Name"><br>
+				  <span id="nameErr"></span>
+				</div>
+				<div>
+				  <h4><label for="country" style="color: #a83268; font-family: Times New Roman">Country</label><br></h4>
+				  <select name="country" id="country">
+					<option value="null" selected disabled hidden>Select An Option</option>
+					<option value="india">Ireland</option>
+					<option value="usa">USA</option>
+					<option value="china">Spain</option>
+					<option value="paris">Japan</option>
+				  </select><br>
+				  <span id="countryErr"></span>
+				</div>
+				<div>
+				  <h4><label for="zip" style="color: #a83268; font-family: Times New Roman">Eir Code</label><br></h4>
+				  <input type="number" class="input" name="zip" id="zip" placeholder="Eir Code"><br>
+				  <span id="zipErr"></span>
+				</div>
+				<div>
+				  <h4><label for="email" style="color: #a83268; font-family: Times New Roman">Email</label><br></h4>
+				  <input type="email" class="input" name="email" id="email" placeholder="Email"><br>
+				  <span id="emailErr"></span>
+				</div>
+				
+				<div>
+				  <h4 style="color: #a83268; font-family: Times New Roman">Select languages you know</h4>
+				  <input type="checkbox" id="lang1" name="English" value="English">
+				  <label for="lang1">English</label><br>
+				  <input type="checkbox" id="lang2" name="French" value="French">
+				  <label for="lang2">French</label><br>
+				  <input type="checkbox" id="lang3" name="Spanish" value="Spanish">
+				  <label for="lang3">Spanish</label><br>
+				  <span id="languageErr"></span>
+				</div>
+				
+			  </form>
+			  <div id="popup" style="display: none;">
+				<div id="data">
+				  <span class="close">&times;</span><br>
+				  <p></p>
+				</div>
+			  </div>
+			  <script src="script.js"></script></center>
+			  
+			  
+			<bottom><center><div class="col-md-4">
+								<a href= "doctor.html" button id="Submit" class="btn btn-success" type="Submit">Continue to Doctor's page</a>
+			</div></center>	</bottom> 
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "login.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Go to the Log In Page</a>
+								
+							</div>
+			</div></center>	</bottom> 
+
+
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "doctor.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Doctors Page</a>
+								
+							</div>
+			</div></center>	</bottom>  
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "hospital.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Hospital Page</a>
+							</div>
+			</div></center>	</bottom> 
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "issues.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Issues Page</a><br><br><br><br>
+							</div>
+			</div></center>	</bottom>  
+	
+   
+    </div>
+  </body>
+</html>

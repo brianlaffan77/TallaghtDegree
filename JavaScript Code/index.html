@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatbot in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+	
+	<style>
+		/* Style the body */
+		.body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		/* Header Title */
+		.header {
+		  padding: 30px;
+		  text-align: center;
+		  background: #1abc9c;
+		  color: white;
+		  font-size: 30px;
+		}
+		
+		
+
+		/* Page Content */
+		.content {padding:20px;}
+	</style>
+  </head>
+  <body>
+	
+	<div class="header">
+	  <center><div class="navbar">
+		  <li><a href="index.html" style="color: #eb34c0; font-family: Times New Roman">Home</a>
+				<a href="login.html" style="color: #eb34c0; font-family: Times New Roman">Log in</a>
+				<a href="register.html" style="color: #eb34c0; font-family: Times New Roman">Register</a>
+                <a href="doctor.html" style="color: #eb34c0; font-family: Times New Roman">Doctor</a> 
+                <a href="hospital.html" style="color: #eb34c0; font-family: Times New Roman">Hospital</a>
+				<a href="issues.html" style="color: #eb34c0; font-family: Times New Roman">Issues</a>
+                <a href="https://www.google.com/maps/@53.2844896,-6.1842759,14z?entry=ttu" style="color: #eb34c0; font-family: Times New Roman">Map</a> 
+		  </div>
+	</div>
+
+		<h1 style="color: #a032a8; font-family: Times New Roman"><center>Welcome To The Home Page</center></h1>
+			
+			 <center><a href="doctor.html"><img src="data:image/jpeg;base64,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"></a> <br><br>
+			 <a style="color: #de0d11; font-family: Times New Roman">click here for a Doctor </a><br><br>
+			 <a href="hospital.html"><img src="https://content.presentermedia.com/files/animsp/00003000/3076/hospital_building_helicopter_pa_lg_wm.gif"></a> <br><br>
+			 <a style="color: #de0d11; font-family: Times New Roman">click here for a Hospital </a><br><br>
+			 <a href="issues.html"><img src="https://i.gifer.com/7BZb.gif"></a> <br><br>
+			 <a style="color: #de0d11; font-family: Times New Roman">click here to check your issues </a></center>
+	
+  
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Medical Chatbot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there 👋<br>What sort of Issue do you have?</p>
+        </li><br>
+			<button>Do you need a specific Doctor</button><br><br>
+			<button>Do you need a specific Hospital</button><br><br>
+			<button>Do you have a specific Issue</button>
+
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatbot in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+  </head>
+  
+	<style>
+		/* Style the body */
+		.body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		/* Header Title */
+		.header {
+		  padding: 30px;
+		  text-align: center;
+		  background: #1abc9c;
+		  color: white;
+		  font-size: 30px;
+		}
+		
+		
+
+		/* Page Content */
+		.content {padding:20px;}
+	</style> 
+
+<script>
+.dropdown-check-list {
+		  display: inline-block;
+		}
+
+		.dropdown-check-list .anchor {
+		  position: relative;
+		  cursor: pointer;
+		  display: inline-block;
+		  padding: 5px 50px 5px 10px;
+		  border: 1px solid #ccc;
+		}
+
+		.dropdown-check-list .anchor:after {
+		  position: absolute;
+		  content: "";
+		  border-left: 2px solid black;
+		  border-top: 2px solid black;
+		  padding: 5px;
+		  right: 10px;
+		  top: 20%;
+		  -moz-transform: rotate(-135deg);
+		  -ms-transform: rotate(-135deg);
+		  -o-transform: rotate(-135deg);
+		  -webkit-transform: rotate(-135deg);
+		  transform: rotate(-135deg);
+		}
+
+		.dropdown-check-list .anchor:active:after {
+		  right: 8px;
+		  top: 21%;
+		}
+
+		.dropdown-check-list ul.items {
+		  padding: 2px;
+		  display: none;
+		  margin: 0;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+
+		.dropdown-check-list ul.items li {
+		  list-style: none;
+		}
+
+		.dropdown-check-list.visible .anchor {
+		  color: #0094ff;
+		}
+
+		.dropdown-check-list.visible .items {
+		  display: block;
+		}
+		}
+		
+		var checkList = document.getElementById('list1');
+		checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+		  if (checkList.classList.contains('visible'))
+			checkList.classList.remove('visible');
+		  else
+			checkList.classList.add('visible');
+		}
+</script>
+  
+  <body>
+	<div class="header">
+	  <center><div class="navbar">
+		  <li><a href="index.html" style="color: #eb34c0; font-family: Times New Roman">Home</a>
+				<a href="login.html" style="color: #eb34c0; font-family: Times New Roman">Log in</a>
+				<a href="register.html" style="color: #eb34c0; font-family: Times New Roman">Register</a>
+                <a href="doctor.html" style="color: #eb34c0; font-family: Times New Roman">Doctor</a> 
+                <a href="hospital.html" style="color: #eb34c0; font-family: Times New Roman">Hospital</a>
+				<a href="issues.html" style="color: #eb34c0; font-family: Times New Roman">Issues</a>
+                <a href="https://www.google.com/maps/@53.2844896,-6.1842759,14z?entry=ttu" style="color: #eb34c0; font-family: Times New Roman">Map</a> 
+		  </div>
+	</div>
+	
+	<h1 style="color: #de980d; font-family: Times New Roman"><center>Welcome To The Hospital Page</center></h1>
+
+		<form name="form1" id="form1" action="/action_page.php">
+		<center><details>
+			  <summary style="color: #a83289; font-family: Times New Roman">Hospital Type</summary>
+				<form>
+					<fieldset>
+				  <center><legend style="color: #a83289; font-family: Times New Roman">
+					Choose From List
+				  </legend></center>
+					<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a83289; font-family: Times New Roman">Hospital Type</span>
+						  <ul class="items">
+							<li><input type="checkbox" />Public </li>
+							<li><input type="checkbox" />Private </li>
+							<li><input type="checkbox" />Hi-Tec </li>
+							<li><input type="checkbox" />Specilaty </li>
+						  </ul>
+					</div>
+				</fieldset>
+			  </form>
+			</details></center>	
+			
+			<center><details>
+			  <summary style="color: #a83289; font-family: Times New Roman">Hospital Provence</summary>
+			  <form>
+				<fieldset>
+				  <center><legend style="color:#a83289; font-family: Times New Roman">
+					Choose From List
+				  </legend></center>
+					<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a83289; font-family: Times New Roman">Hospital Provence</span>
+						  <ul class="items">
+							<li><input type="checkbox" />Leinster </li>
+							<li><input type="checkbox" />Connoght </li>
+							<li><input type="checkbox" />Ulster </li>
+							<li><input type="checkbox" />Munster </li>
+						  </ul>
+						</div>
+				</fieldset>
+			  </form>
+			</details></center>	
+
+			<center><details>
+			  <summary style="color: #a83289; font-family: Times New Roman">Hospital County</summary>
+			  <form>
+				<fieldset>
+				  <center><legend style="color: #a83289; font-family: Times New Roman">
+					Choose From List
+				  </legend></center>
+					<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a83289; font-family: Times New Roman">Hospital County</span>
+						  <ul class="items">
+								<li><input type="checkbox" />Antrim </li>
+								<li><input type="checkbox" />Armagh </li>
+								<li><input type="checkbox" />Carlow </li>
+								<li><input type="checkbox" />Cavan </li>
+								<li><input type="checkbox" />Clare </li>
+								<li><input type="checkbox" />Cork </li>
+								<li><input type="checkbox" />Derry </li>
+								<li><input type="checkbox" />Donegal </li>
+								<li><input type="checkbox" />Down </li>
+								<li><input type="checkbox" />Dublin </li>
+								<li><input type="checkbox" />Fermanagh </li>
+								<li><input type="checkbox" />Galway </li>
+								<li><input type="checkbox" />Kerry </li>
+								<li><input type="checkbox" />Kildare </li>
+								<li><input type="checkbox" />Kilkenny </li>
+								<li><input type="checkbox" />Laois </li>
+								<li><input type="checkbox" />Leitrim </li>
+								<li><input type="checkbox" />Limerick </li>
+								<li><input type="checkbox" />Longford </li>
+								<li><input type="checkbox" />Louth </li>
+								<li><input type="checkbox" />Mayo </li>
+								<li><input type="checkbox" />Meath </li>
+								<li><input type="checkbox" />Monaghan </li>
+								<li><input type="checkbox" />Offaly </li>
+								<li><input type="checkbox" />Roscommon </li>
+								<li><input type="checkbox" />Sligo </li>
+								<li><input type="checkbox" />Tipperary </li>
+								<li><input type="checkbox" />Tyrone </li>
+								<li><input type="checkbox" />Waterford </li>
+								<li><input type="checkbox" />Westmeath </li>
+								<li><input type="checkbox" />Wexford </li>
+								<li><input type="checkbox" />Wicklow </li>
+						  </ul>
+						</div>
+				</fieldset>
+			  </form>
+		</details></center>			
+
+		<center><details>
+			  <summary style="color: #a83289; font-family: Times New Roman">Additional Data</summary>
+			  <form>
+				<fieldset>
+				  <center><legend style="color: #a83289; font-family: Times New Roman">
+					Please Add Extra Data
+				  </legend></center>
+						<div>
+							<center><form action="//www.html.am/html-codes/textboxes/submitted.cfm">
+							<textarea name="myTextBox" cols="75" rows="10" style="color: #a83289; font-family: Times New Roman">
+							Enter some text...
+							</textarea>
+							</form></center>
+						</div>
+				</fieldset>
+			  </form>
+		</details></center>	
+
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "doctor.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Doctors Page</a>
+								
+							</div>
+			</div></center>	</bottom>  
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "hospital.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Hospital Page</a>
+							</div>
+			</div></center>	</bottom> 
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "issues.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to issues Page</a><br><br><br><br>
+							</div>
+			</div></center>	</bottom>  
+		
+	<button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Medical Chatbot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there 👋<br>What sort of Hospital do you need?</p>
+         </li><br>
+		 
+			<button>Please be specific about about the Hospital Type</button><br><br>
+			<button>Please be specific about about the Hospital Provence</button><br><br>
+			<button>Please be specific about about the Hospital County</button><br><br>
+			<button>Please enter any Additional Data</button>
+      </ul>
+	  
+	  
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+  </body>
+</html>

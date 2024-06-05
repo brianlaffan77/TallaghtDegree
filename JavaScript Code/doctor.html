@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatbot in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+  </head>
+  
+  <style>
+		/* Style the body */
+		.body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		/* Header Title */
+		.header {
+		  padding: 30px;
+		  text-align: center;
+		  background: #1abc9c;
+		  color: white;
+		  font-size: 30px;
+		}
+		
+		
+
+		/* Page Content */
+		.content {padding:20px;}
+	</style>
+	
+	<script>
+		.dropdown-check-list {
+		  display: inline-block;
+		}
+
+		.dropdown-check-list .anchor {
+		  position: relative;
+		  cursor: pointer;
+		  display: inline-block;
+		  padding: 5px 50px 5px 10px;
+		  border: 1px solid #ccc;
+		}
+
+		.dropdown-check-list .anchor:after {
+		  position: absolute;
+		  content: "";
+		  border-left: 2px solid black;
+		  border-top: 2px solid black;
+		  padding: 5px;
+		  right: 10px;
+		  top: 20%;
+		  -moz-transform: rotate(-135deg);
+		  -ms-transform: rotate(-135deg);
+		  -o-transform: rotate(-135deg);
+		  -webkit-transform: rotate(-135deg);
+		  transform: rotate(-135deg);
+		}
+
+		.dropdown-check-list .anchor:active:after {
+		  right: 8px;
+		  top: 21%;
+		}
+
+		.dropdown-check-list ul.items {
+		  padding: 2px;
+		  display: none;
+		  margin: 0;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+
+		.dropdown-check-list ul.items li {
+		  list-style: none;
+		}
+
+		.dropdown-check-list.visible .anchor {
+		  color: #0094ff;
+		}
+
+		.dropdown-check-list.visible .items {
+		  display: block;
+		}
+		}
+		
+		var checkList = document.getElementById('list1');
+		checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+		  if (checkList.classList.contains('visible'))
+			checkList.classList.remove('visible');
+		  else
+			checkList.classList.add('visible');
+		}
+	</script>
+  
+  <body>
+	<div class="header">
+	  <center><div class="navbar">
+		  <li><a href="index.html" style="color: #eb34c0; font-family: Times New Roman">Home</a>
+				<a href="login.html" style="color: #eb34c0; font-family: Times New Roman">Log in</a>
+				<a href="register.html" style="color: #eb34c0; font-family: Times New Roman">Register</a>
+                <a href="doctor.html" style="color: #eb34c0; font-family: Times New Roman">Doctor</a> 
+                <a href="hospital.html" style="color: #eb34c0; font-family: Times New Roman">Hospital</a>
+				<a href="issues.html" style="color: #eb34c0; font-family: Times New Roman">Issues</a>
+                <a href="https://www.google.com/maps/@53.2844896,-6.1842759,14z?entry=ttu" style="color: #eb34c0; font-family: Times New Roman">Map</a> 
+		  </div>
+	</div>
+	
+	<h1 style="color: #370dde; font-family: Times New Roman"><center>Welcome To The Doctor Page</center></h1>
+
+		<form name="form1" id="form1" action="/action_page.php">
+		<center><details>
+			  <summary style="color: #a8323e; font-family: Times New Roman">Doctor Type</summary>
+				<form>
+					<fieldset>
+					  <center><legend style="color: #a8323e; font-family: Times New Roman">
+						Choose From List
+						</legend ></center>
+						<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a8323e; font-family: Times New Roman">Select Doctor</span>
+						  <ul class="items">
+							<li><input type="checkbox" />Surgen </li>
+							<li><input type="checkbox" />Concultants</li>
+							<li><input type="checkbox" />Nurse </li>
+						  </ul>
+						</div>
+						
+					</fieldset>
+				</form>
+			</details></center>
+				
+			<center><details>
+			  <summary style="color: #a8323e; font-family: Times New Roman">Surgen Speciliaty</summary>
+			  <form>
+				<fieldset>
+				  <legend style="color: #a8323e; font-family: Times New Roman">
+					Choose From List
+				  </legend>
+					<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a8323e; font-family: Times New Roman">Select Surgen Type</span>
+						  <ul class="items">
+							<li><input type="checkbox" />Cardiac Surgen</li>
+							<li><input type="checkbox" />Thoracic Surgen </li>
+							<li><input type="checkbox" />Gastrointestinal Surgen</li>
+							<li><input type="checkbox" />Vascular Surgen </li>
+							<li><input type="checkbox" />Urological Surgen </li>
+							<li><input type="checkbox" />ENT Surgen </li>
+							<li><input type="checkbox" />Oral and maxillofacial Surgen </li>
+							<li><input type="checkbox" />Neurosurgen </li>
+							<li><input type="checkbox" />Orthopedic Surgen </li>
+						  </ul>
+					</div>
+				</fieldset>
+			  </form>
+			</details></center>	
+			
+			<center><details>
+			  <summary style="color: #a8323e; font-family: Times New Roman">Consultant Speciliaty</summary>
+			  <form>
+				<fieldset>
+				  <legend style="color: #a8323e; font-family: Times New Roman">
+					Choose From List
+				  </legend>
+					<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a8323e; font-family: Times New Roman">Select Consultant Type</span>
+						  <ul class="items">
+							<li><input type="checkbox" />Family Therapy </li>
+							<li><input type="checkbox" />Psychotherapy </li>
+							<li><input type="checkbox" />Behaviour therapy </li>
+							<li><input type="checkbox" />Cognitive Behavioral Therapy </li>
+							<li><input type="checkbox" />Psychodynamic Psychotherapy </li>
+							<li><input type="checkbox" />Therapy </li>
+							<li><input type="checkbox" />Grief Counseling </li>
+							<li><input type="checkbox" />Mental Health Counceling </li>
+							<li><input type="checkbox" />Career Counseling </li>
+						  </ul>
+						</div>
+				</fieldset>
+			  </form>
+			</details></center>	
+
+			<center><details>
+			  <summary style="color: #a8323e; font-family: Times New Roman">Nurse Speciliaty</summary>
+			  <form>
+				<fieldset>
+				  <legend style="color: #a8323e; font-family: Times New Roman">
+					Choose From List
+				  </legend>
+					<div id="list1" class="dropdown-check-list" tabindex="100">
+						  <span class="anchor" style="color: #a8323e; font-family: Times New Roman">Select Nurse Type</span>
+						  <ul class="items">
+							<li><input type="checkbox" />Burn Nurse </li>
+							<li><input type="checkbox" />Cardiac Nurse </li>
+							<li><input type="checkbox" />Radiology Nurse </li>
+							<li><input type="checkbox" />Forensic Nurseng </li>
+							<li><input type="checkbox" />Gastroenterology Nurse </li>
+							<li><input type="checkbox" />Oncology Nurse </li>
+							<li><input type="checkbox" />Nurse midwifery</li>
+							<li><input type="checkbox" />Home health nursing</li>
+						  </ul>
+						</div>
+				</fieldset>
+			  </form>
+		</details></center>	
+		
+		
+		<center><details>
+			  <summary style="color: #a8323e; font-family: Times New Roman">Additional Data</summary>
+			  <form>
+				<fieldset>
+				  <center><legend style="color: #a8323e; font-family: Times New Roman">
+					Please Add Extra Data
+				  </legend></center>
+					<div>
+						 <center><form action="//www.html.am/html-codes/textboxes/submitted.cfm">
+							<textarea name="myTextBox" cols="75" rows="10"  style="color: #a8323e; font-family: Times New Roman">
+							Enter some text...
+							</textarea>
+						</form></center>
+					</div>
+				</fieldset>
+			  </form>
+		</details></center>	
+		
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "doctor.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Doctors Page</a>
+								
+							</div>
+			</div></center>	</bottom>  
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "hospital.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Hospital Page</a>
+							</div>
+			</div></center>	</bottom> 
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "issues.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to issues Page</a><br><br><br><br>
+							</div>
+			</div></center>	</bottom> 
+		
+	
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Medical Chatbot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there 👋<br>What sort of Doctor do you need?</p>
+        </li><br>
+			<button>Please enter specific information about the Doctor</button><br><br>
+			<button>Please enter specific information about the Surgen</button><br><br>
+			<button>Please enter specific information about the Consltant</button><br><br>
+			<button>Please enter specific information about the Nurse</button><br><br>
+			<button>Please enter any Additional Data</button>
+      </ul>
+	  
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+  </body>
+</html>

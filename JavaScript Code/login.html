@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatbot in JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer>
+	var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+	
+	</script>
+  </head>
+  
+  <style>
+		/* Style the body */
+		.body {
+		  font-family: Arial;
+		  margin: 0;
+		}
+
+		/* Header Title */
+		.header {
+		  padding: 30px;
+		  text-align: center;
+		  background: #1abc9c;
+		  color: white;
+		  font-size: 30px;
+		}
+		
+		
+
+		/* Page Content */
+		.content {padding:20px;}
+	</style>
+  
+ <body>
+	<div class="header">
+	  <center><div class="navbar">
+		  <li><a href="index.html" style="color: #eb34c0; font-family: Times New Roman">Home</a>
+				<a href="login.html" style="color: #eb34c0; font-family: Times New Roman">Log in</a>
+				<a href="register.html" style="color: #eb34c0; font-family: Times New Roman">Register</a>
+                <a href="doctor.html" style="color: #eb34c0; font-family: Times New Roman">Doctor</a> 
+                <a href="hospital.html" style="color: #eb34c0; font-family: Times New Roman">Hospital</a>
+				<a href="issues.html" style="color: #eb34c0; font-family: Times New Roman">Issues</a>
+                <a href="https://www.google.com/maps/@53.2844896,-6.1842759,14z?entry=ttu" style="color: #eb34c0; font-family: Times New Roman">Map</a> 
+		  </div>
+	</div>
+	
+		<center><h1 style="color: #0ddebb; font-family: Times New Roman"><center>Welcome To The Log In Page</center></h1>
+	
+       <div class="box">
+
+             <div class="container">
+				  <div class="wrapper">
+					
+					<form action="#">
+					  <div class="field email">
+						<div class="input-area">
+						  <input type="text" placeholder="Email Address">
+						  <i class="icon fas fa-envelope"></i>
+						  <i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						<div class="error error-txt">Email can't be blank</div>
+					  </div>
+					  <div class="field password">
+						<div class="input-area">
+						  <input type="password" placeholder="Password">
+						  <i class="icon fas fa-lock"></i>
+						  <i class="error error-icon fas fa-exclamation-circle"></i>
+						</div>
+						
+					  </div>
+					  
+						<div class="col-md-4">
+							<a href= "doctor.html" button id="Submit" class="btn btn-success" type="Submit">Log In</a>
+						</div>
+					</form>
+					
+				  <script src="script.js"></script>
+				  
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "passwordreset.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Reset password</a>
+							</div>
+			</div></center>	</bottom> 
+	
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "register.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Go to the Registration Page</a>
+							</div>
+			</div></center>	</bottom> 
+
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "doctor.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Doctors Page</a>
+								
+							</div>
+			</div></center>	</bottom>  
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "hospital.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Hospital Page</a>
+							</div>
+			</div></center>	</bottom> 
+			
+			<bottom><center><div class="form-group">
+							<label class="col-md-4 control-label" for="Submit"></label><!--Submition buttons for moving through the system-->
+							<div class="col-md-4">
+								<a href= "issues.html" button id="Submit" class="btn btn-success" type="Submit" style="color: #6832a8; font-family: Times New Roman">Submit and go to Issues Page</a><br><br><br><br>
+							</div>
+			</div></center>	</bottom>  
+			
+			<center><img src="http://4.bp.blogspot.com/-sV-tFYrcLg4/T55Ye6wc0-I/AAAAAAAAAIA/V644lEJw3VE/s1600/Humans+Are+Animals+But+Animals+Are+Not+Human=2.gif"></center>	<!--Additional image-->			
+	
+    
+    </div>
+  </body>
+</html>
